@@ -8,6 +8,10 @@
 import UIKit
 
 class MainViewController: UIViewController{
+    
+    
+    @IBOutlet weak var welcomeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,4 +25,11 @@ class MainViewController: UIViewController{
         //네비게이션바를 다시 숨겨주기
         navigationController?.navigationBar.isHidden = true
     }
+    
+    
+    @IBAction func logoutBtnTapped(_ sender: UIButton) {
+        //첫화면으로 pop
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }
