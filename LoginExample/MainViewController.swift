@@ -50,10 +50,25 @@ class MainViewController: UIViewController{
             print("ERROR: signOut \(signOutError.localizedDescription)")
         }
     }
-
+    
     //비밀번호 변경
     @IBAction func resetPasswordBtnTapped(_ sender: UIButton) {
         let email =  Auth.auth().currentUser?.email ?? ""
         Auth.auth().sendPasswordReset(withEmail: email, completion: nil)
+    }
+    
+    
+    @IBAction func profileUpdateBtnTapped(_ sender: UIButton) {
+        
+        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+        changeRequest?.displayName = "언짠"
+        changeRequest?.commitChanges {_ in
+            let displayName = Auth.auth().currentUser?.displayName ?? Auth.auth().currentUser?.email ?? "고객"
+            self.welcomeLabel.text == """
+            환영합니다.
+            \(displayName)님
+            """
+            print("닉네임업데이트하기")
+        }
     }
 }

@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5939311D2A13655200A8D528 /* LoginExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginExample.entitlements; sourceTree = "<group>"; };
 		599DDC492A0CC4EB00372414 /* LoginExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		599DDC4C2A0CC4EB00372414 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		599DDC4E2A0CC4EB00372414 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		599DDC4B2A0CC4EB00372414 /* LoginExample */ = {
 			isa = PBXGroup;
 			children = (
+				5939311D2A13655200A8D528 /* LoginExample.entitlements */,
 				599DDC672A0CCFF100372414 /* MainViewController.swift */,
 				599DDC4C2A0CC4EB00372414 /* AppDelegate.swift */,
 				599DDC4E2A0CC4EB00372414 /* SceneDelegate.swift */,
@@ -115,6 +117,7 @@
 				599DDC462A0CC4EB00372414 /* Frameworks */,
 				599DDC472A0CC4EB00372414 /* Resources */,
 				986561FC55D43B3673A8C1D4 /* [CP] Embed Pods Frameworks */,
+				A010E6CFA803E6793F4C02B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +191,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginExample/Pods-LoginExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A010E6CFA803E6793F4C02B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginExample/Pods-LoginExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginExample/Pods-LoginExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginExample/Pods-LoginExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9F8473089AB9C5C67DC60AF /* [CP] Check Pods Manifest.lock */ = {
@@ -370,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoginExample/LoginExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X73WTK25N3;
@@ -399,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoginExample/LoginExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X73WTK25N3;
