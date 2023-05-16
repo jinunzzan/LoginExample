@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MainViewController: UIViewController{
     
@@ -24,6 +25,12 @@ class MainViewController: UIViewController{
         super.viewWillAppear(animated)
         //네비게이션바를 다시 숨겨주기
         navigationController?.navigationBar.isHidden = true
+        
+        let email = Auth.auth().currentUser?.email ?? "고객"
+        welcomeLabel.text = """
+환영합니다.
+\(email)님
+"""
     }
     
     

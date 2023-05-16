@@ -227,7 +227,7 @@
         <!--Main View Controller-->
         <scene sceneID="kEC-ld-pFa">
             <objects>
-                <viewController id="HFb-AU-ZbW" customClass="MainViewController" customModule="LoginExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="HFb-AU-ZbW" customClass="MainViewController" customModule="LoginExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Onh-UP-Iia">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
