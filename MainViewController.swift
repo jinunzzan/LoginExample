@@ -18,7 +18,7 @@ class MainViewController: UIViewController{
         
         //메인화면에서 뒤로가기가 되면 이상하겠죠? 뒤로가기 안되게 pop제스처 막기
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-       
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,8 +35,17 @@ class MainViewController: UIViewController{
     
     
     @IBAction func logoutBtnTapped(_ sender: UIButton) {
-        //첫화면으로 pop
-        self.navigationController?.popToRootViewController(animated: true)
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+            //첫화면으로 pop
+            self.navigationController?.popToRootViewController(animated: true)
+        }catch let signOutError as NSError {
+            print("ERROR: signOut \(signOutError.localizedDescription)")
+        }
+       
+        
     }
     
 }
