@@ -12,6 +12,7 @@ class MainViewController: UIViewController{
     
     
     @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var resetPasswordBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,10 @@ class MainViewController: UIViewController{
 환영합니다.
 \(email)님
 """
+        
+        //이메일 로그인일 경우만 버튼이 보이도록!
+        let isEmailSignIn = Auth.auth().currentUser?.providerData[0].providerID == "password"
+        resetPasswordBtn.isHidden = !isEmailSignIn
     }
     
     
@@ -44,8 +49,11 @@ class MainViewController: UIViewController{
         }catch let signOutError as NSError {
             print("ERROR: signOut \(signOutError.localizedDescription)")
         }
-       
-        
     }
-    
+
+    //비밀번호 변경
+    @IBAction func resetPasswordBtnTapped(_ sender: UIButton) {
+        let email =  Auth.auth().currentUser?.email ?? ""
+        Auth.auth().sendPasswordReset(withEmail: email, completion: nil)
+    }
 }

@@ -64,14 +64,12 @@
 				7F78375DB4C30D894B746E4E /* Pods-LoginExample.debug.xcconfig */,
 				A68B963039BD33B6AAF07B12 /* Pods-LoginExample.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		599DDC402A0CC4EB00372414 = {
 			isa = PBXGroup;
 			children = (
-				599DDC672A0CCFF100372414 /* MainViewController.swift */,
 				599DDC4B2A0CC4EB00372414 /* LoginExample */,
 				599DDC4A2A0CC4EB00372414 /* Products */,
 				3A22D51918323B54355824BA /* Pods */,
@@ -90,6 +88,7 @@
 		599DDC4B2A0CC4EB00372414 /* LoginExample */ = {
 			isa = PBXGroup;
 			children = (
+				599DDC672A0CCFF100372414 /* MainViewController.swift */,
 				599DDC4C2A0CC4EB00372414 /* AppDelegate.swift */,
 				599DDC4E2A0CC4EB00372414 /* SceneDelegate.swift */,
 				599DDC522A0CC4EB00372414 /* Main.storyboard */,
